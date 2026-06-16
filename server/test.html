@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini CRM Test</title>
+</head>
+<body>
+
+    <h2>Mini CRM Test Page</h2>
+
+    <button onclick="addLead()">Add Sample Lead</button>
+
+    <button onclick="updateLead()">Update Lead Status</button>
+
+    <button onclick="deleteLead()">Delete Lead</button>
+
+    <script>
+        async function addLead() {
+            const response = await fetch("http://localhost:5000/api/leads", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: "Rahul",
+                    email: "rahul@gmail.com",
+                    phone: "9876543210",
+                    company: "ABC Pvt Ltd"
+                })
+            });
+
+            const data = await response.json();
+            console.log(data);
+            alert("Lead Added Successfully");
+        }
+
+        async function updateLead() {
+            const response = await fetch(
+                "http://localhost:5000/api/leads/6a2a6b1ea2cff797ee1429f7",
+                {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        status: "Contacted"
+                    })
+                }
+            );
+
+            const data = await response.json();
+            console.log(data);
+            alert("Lead Updated Successfully");
+        }
+
+        async function deleteLead() {
+            const response = await fetch(
+                "http://localhost:5000/api/leads/6a2a6b1ea2cff797ee1429f7",
+                {
+                    method: "DELETE"
+                }
+            );
+
+            const data = await response.json();
+            console.log(data);
+            alert("Lead Deleted Successfully");
+        }
+    </script>
+
+</body>
+</html>
