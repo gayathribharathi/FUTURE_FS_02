@@ -28,7 +28,7 @@ const handleSubmit = async (e) => {
 
   try {
     await axios.post(
-      "http://localhost:5000/api/leads",
+      `${import.meta.env.VITE_API_URL}/api/leads`,
       formData
     );
 
