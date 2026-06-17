@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { CSVLink } from "react-csv";
+import.meta.env.VITE_API_URL
 import "../App.css";
 
 function Admin() {

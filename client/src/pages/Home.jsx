@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
+import.meta.env.VITE_API_URL
 import "./Home.css";
 
 
