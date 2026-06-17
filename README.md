@@ -9,6 +9,8 @@ URL: /admin
 Username: growthkey
 Password: gk2026
 
+live demo link: https://future-fs-02-seven-self.vercel.app
+
 🚀 Features
 🏠 Home page with working UI
 📝 Customer form submission
