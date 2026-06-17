@@ -3,6 +3,12 @@
 
 A full-stack Customer Relationship Management (CRM) web application built using React (Vite), Node.js, Express, and MongoDB. This project helps manage customer data with authentication, dashboard analytics, search/filter, and CSV export features.
 
+## Admin Login
+
+URL: /admin
+Username: growthkey
+Password: gk2026
+
 🚀 Features
 🏠 Home page with working UI
 📝 Customer form submission
